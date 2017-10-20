@@ -19,7 +19,13 @@ public class CharacterControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		#if UNITY_IPHONE
+		float move = Input.acceleration.x;
+		#elif UNITY_ANDROID
+		float move = Input.acceleration.x;
+		#else
 		float move = Input.GetAxis ("Horizontal");
+		#endif
 
 		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y * speedRate);
 
