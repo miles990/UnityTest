@@ -4,8 +4,12 @@
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
+
+# mac ignore file
+.DS_Store
  
 # unity ignore file
+*.vscode
 *.csproj
 *.unityproj
 *.sln
